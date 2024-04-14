@@ -106,12 +106,12 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <HeroHighlight>
-      <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-        <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+      <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full top-0 md:left-20">
+        <h1 className="text-2xl md:text-7xl font-bold text-white">
           Nós criamos <br /> <Highlight className="text-white">eventos memoráveis</Highlight>
         </h1>
-        <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-          Agência líder na oferta de gerenciamento de eventos em Santarém
+        <p className="max-w-2xl text-base md:text-2xl mt-8 text-neutral-200">
+          Agência líder no gerenciamento de soluções criativas para eventos.
         </p>
       </div>
     </HeroHighlight>

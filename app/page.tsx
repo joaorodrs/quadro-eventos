@@ -8,11 +8,11 @@ export default function HeroParallaxDemo() {
   return (
     <main>
       <Image
-        src="/93-logo.png"
+        src="/logo-white.png"
         alt="Logo"
-        width={100}
-        height={100}
-        className="fixed z-10"
+        width={150}
+        height={150}
+        className="fixed z-10 right-0 m-4"
       />
       <HeroParallax products={products} />
     </main>
