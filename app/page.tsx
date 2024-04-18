@@ -7,8 +7,10 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 import products from "@/utils/products";
 import { LampContainer } from "@/components/ui/lamp";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import testimonials from "@/utils/testimonials";
 
-export default function HeroParallaxDemo() {
+export default function Home() {
   return (
     <main>
       <Image
@@ -51,6 +53,13 @@ export default function HeroParallaxDemo() {
 
       <div className="min-h-screen w-full bg-slate-950">
         <ParallaxScroll images={products.map(item => item.thumbnail)} />
+      </div>
+      <div className="h-40 w-full bg-gradient-to-b from-slate-950 to-black to-60%" />
+
+      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards
+          items={testimonials}
+        />
       </div>
     </main>
   )
