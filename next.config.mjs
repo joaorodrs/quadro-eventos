@@ -10,6 +10,7 @@ const nextConfig = {
       },
     ],
     domains: ['scontent.cdninstagram.com', 'scontent.cdninstagram.com'],
+    path: '/**'
   },
 };
 
