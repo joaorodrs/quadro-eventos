@@ -2,7 +2,6 @@
 const nextConfig = {
   images: {
     domains: ['https://scontent.cdninstagram.com'],
-    path: '/v'
   },
 };
 
