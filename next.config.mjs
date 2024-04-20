@@ -9,6 +9,7 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    domains: ['scontent.cdninstagram.com', 'scontent.cdninstagram.com'],
   },
 };
 
