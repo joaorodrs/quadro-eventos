@@ -18,7 +18,7 @@ export default function Home() {
         alt="Logo"
         width={150}
         height={150}
-        className="fixed z-10 right-0 m-4"
+        className="fixed z-[21] right-0 m-4"
       />
 
       <HeroParallax products={products} />

@@ -13,12 +13,15 @@ export const ParallaxScroll = ({
   images: string[];
   className?: string;
 }) => {
-  const gridRef = useRef<any>(null);
-  const { scrollYProgress } = useScroll();
+  const elementRef = useRef<any>(null);
+  const { scrollYProgress } = useScroll({
+    target: elementRef,
+    offset: ["start end", "end end"]
+  });
 
-  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 150]);
-  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  const translateFirst = useTransform(scrollYProgress, [0.3, 1], [0, -200]);
+  const translateSecond = useTransform(scrollYProgress, [0.3, 1], [0, 200]);
+  const translateThird = useTransform(scrollYProgress, [0.3, 1], [0, -200]);
 
   const third = Math.ceil(images.length / 3);
 
@@ -28,12 +31,11 @@ export const ParallaxScroll = ({
 
   return (
     <div
+      ref={elementRef}
       className={cn("items-start w-full", className)}
-      ref={gridRef}
     >
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 pb-40 px-10"
-        ref={gridRef}
       >
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (
@@ -66,7 +68,10 @@ export const ParallaxScroll = ({
         </div>
         <div className="grid gap-10">
           {thirdPart.map((el, idx) => (
-            <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+            <motion.div
+              style={{ y: translateThird }}
+              key={"grid-3" + idx}
+            >
               <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
