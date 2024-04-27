@@ -59,6 +59,60 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-8">
         <HoverEffect items={testimonials} />
       </div>
+
+      <div className="flex flex-col align-center justify-between py-40 px-10 mx-auto max-w-6xl md:flex-row">
+        <div>
+          <motion.h1
+            className="text-white text-4xl font-bold"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.1,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+          >
+            Pronto para lançar seu próximo evento?
+          </motion.h1>
+          <motion.h2
+            className="text-slate-400 mt-4"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+          >
+            Construindo momentos, criando memórias: Seu evento, nossa expertise!
+          </motion.h2>
+        </div>
+        <div>
+          <motion.button
+            className="bg-indigo-500 py-4 px-6 mt-8 rounded-lg hover:bg-indigo-400 transition-all md:mt-0"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              delay: 0.6,
+              duration: 0.8,
+            }}
+          >
+            Get started a project
+          </motion.button>
+        </div>
+      </div>
+
+      <footer className="bg-slate-950 pb-20 pt-10 text-slate-500">
+        <div className="mt-10 md:flex md:justify-between md:mx-10">
+          <Image src="/logo-slate.png" alt="Quadro Eventos" width={200} height={200} />
+          <div className="mx-10 mt-4 flex flex-col space-y-4 text-slate-400 md:flex-row md:space-y-0 md:space-x-4 h-fit my-auto">
+            <a className="h-fit">Home</a>
+            <a className="h-fit">Política de Privacidade</a>
+            <a className="h-fit">Contato</a>
+            <h1 className="!mt-16 text-sm md:!mt-0 md:!ml-20">Quadro Eventos<sup>Ⓒ</sup>. 2024.</h1>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
