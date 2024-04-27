@@ -20,7 +20,7 @@ const config: Config = {
       },
       animation: {
         scroll:
-          "scroll 20s forwards linear infinite",
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         scroll: {

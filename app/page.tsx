@@ -7,8 +7,8 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 import products from "@/utils/products";
 import { LampContainer } from "@/components/ui/lamp";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import testimonials from "@/utils/testimonials";
+import { HoverEffect } from "@/components/ui/hover-effect";
 
 export default function Home() {
   return (
@@ -56,10 +56,8 @@ export default function Home() {
       </div>
       <div className="h-40 w-full bg-gradient-to-b from-slate-950 to-black to-60%" />
 
-      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-        <InfiniteMovingCards
-          items={testimonials}
-        />
+      <div className="max-w-7xl mx-auto px-8">
+        <HoverEffect items={testimonials} />
       </div>
     </main>
   )
